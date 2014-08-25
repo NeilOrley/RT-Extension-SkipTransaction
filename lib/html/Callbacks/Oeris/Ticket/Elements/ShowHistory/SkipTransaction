@@ -1,0 +1,9 @@
+<%INIT>
+#-- Oeris : hides useless transactions excpet for History.html
+$$skip = 1 if ( $r->uri !~ /History.html/ and $Transaction->Type !~ /^(Create|Correspond|Comment)$/ );
+</%INIT>
+<%ARGS>
+$Transaction => undef
+$skip => undef
+</%ARGS>
+
